@@ -4,8 +4,7 @@ let configuration = new hatemile.util.Configure(hatemile_configuration)
 let htmlParser = new hatemile.util.html.vanilla.VanillaHTMLDOMParser(document)
 //Instancia a classe de soluções para os problemas de acessibilidade do CSS.
 let accessibleCSS = new hatemile.implementation.AccessibleCSSImplementation(
-  htmlParser,
-  hatemile_configuration_symbols
+  htmlParser
 )
 //Instancia a classe de soluções para os problemas de acessibilidade referentes aos eventos JavaScript inacessíveis via teclado.
 let accessibleEvent = new hatemile.implementation.AccessibleEventImplementation(
@@ -32,46 +31,3 @@ accessibleForm.markAllAutoCompleteFields()
 //Realiza validações nos campos e utiliza o atributo aria-invalid para informar ao usuário se um campo está com um valor inválido ou não.
 accessibleForm.markAllInvalidFields()
 
-//Instancia a classe de soluções de navegação da biblioteca.
-let accessibleNavigation = new hatemile.implementation.AccessibleNavigationImplementation(
-  htmlParser,
-  configuration,
-  hatemile_configuration_skippers
-)
-//Permite que o usuário possa navegar entre os cabeçalhos da página.
-accessibleNavigation.provideNavigationByAllHeadings()
-//Permite que o usuário possa saltar conteúdos da página pré-definidos pelo desenvolvedor.
-accessibleNavigation.provideNavigationByAllSkippers()
-//Permite que o usuário possa navegar para as descrições longas das imagens.
-accessibleNavigation.provideNavigationToAllLongDescriptions()
-
-//Instancia a classe de soluções de problemas de associação
-let accessibleAssociation = new hatemile.implementation.AccessibleAssociationImplementation(
-  htmlParser,
-  configuration
-)
-//Associa as células de dados das tabelas sejam associadas com as células de cabeçalho
-accessibleAssociation.associateAllDataCellsWithHeaderCells()
-//Associa os rótulos aos seus respectivos campos, caso já não estejam associados
-accessibleAssociation.associateAllLabelsWithFields()
-
-//Instancia a classe para forçar o leitor de tela a disponibilizar informações sobre a página.
-let accessibleScreenReader = new hatemile.implementation.AccessibleDisplayScreenReaderImplementation(
-  htmlParser,
-  configuration,
-  navigator.userAgent
-)
-//Força o leitor de tela a mostrar para o usuário o atributo “role” utilizado nos elementos.
-accessibleScreenReader.displayAllRoles()
-//Força o leitor de tela a mostrar para o usuário os cabeçalhos das células de dados das tabelas.
-accessibleScreenReader.displayAllCellHeaders()
-//Força o leitor de tela a mostrar para o usuário todos os atalhos da página, definidos pelo atributo “accesskey”.
-accessibleScreenReader.displayAllShortcuts()
-//Força o leitor de tela a mostrar para o usuário os valores do WAI-ARIA.
-accessibleScreenReader.displayAllWAIARIAStates()
-//Força o leitor de tela a mostrar para o usuário alguns atributos dos links.
-accessibleScreenReader.displayAllLinksAttributes()
-//Força o leitor de tela a mostrar para o usuário o conteúdo dos títulos dos elementos.
-accessibleScreenReader.displayAllTitles()
-//Força o leitor de tela a mostrar para o usuário qual o idioma do elemento.
-accessibleScreenReader.displayAllLanguages()
