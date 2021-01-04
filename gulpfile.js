@@ -48,7 +48,6 @@ gulp.task('js', () => {
             'src/assets/scripts/js/respond.js',
             'src/assets/scripts/js/jquery.js',
             'src/assets/scripts/js/selectivizr.js',
-            'src/assets/scripts/js/remUnitPollify.js',
         ],
         srcJquery = [
             'src/assets/scripts/js/acessibilidade.js',
