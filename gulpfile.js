@@ -191,7 +191,7 @@ gulp.task('acessibilidade', () => {
     gulp.src(src[12]).pipe(gulp.dest(dest[12]))
     gulp.src(src[13]).pipe(gulp.dest(dest[13]))
     gulp.src(src[14]).pipe(gulp.dest(dest[14]))
-    gulp.src(src[15]).pipe(gulp.dest(dest[15]))
+    return gulp.src(src[15]).pipe(gulp.dest(dest[15]))
 })
 gulp.task('clean', () => {
     const srcClean = [
