@@ -21,11 +21,11 @@ function getBrowsers() {
   return navigator.sayswho
 }
 
-const browser = getBrowsers()
+const browserGetI = getBrowsers()
 console.log(
   'Olá dev tudo bem? o navegador que você esta utilizando e o: ' + browser
 )
-let browserGet = browser.replace(/[0-9]/g, '')
+let browserGet = browserGetI.replace(/[0-9]/g, '')
 let count = 0
 browserGet = browserGet.replace(' ', '')
 browserGet = browserGet.toLowerCase()
