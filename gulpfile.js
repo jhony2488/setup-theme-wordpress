@@ -59,12 +59,12 @@ gulp.task('js', () => {
         srcJquery = ['src/assets/scripts/js/acessibilidade.js'],
         distJs = ['dist/assets/scripts/js/']
     gulp.src(srcJquery).pipe(gulp.dest(distJs))
-    gulp.src(srcJs).pipe(uglifyJs()).pipe(gulp.dest(distJs))
-    return gulp
-        .src(srcJsPolify)
+
+    gulp.src(srcJsPolify)
         .pipe(concat('allPolify.js'))
         .pipe(gulp.dest(distJs))
         .pipe(gulp.dest('./src/assets/scripts/js/'))
+    return gulp.src(srcJs).pipe(uglifyJs()).pipe(gulp.dest(distJs))
 })
 gulp.task('ts', () => {
     const src = ['./src/assets/scripts/typescript/**.ts'],
