@@ -47,6 +47,8 @@ gulp.task('js', () => {
             'src/assets/scripts/js/html5Shiv.js',
             'src/assets/scripts/js/respond.js',
             'src/assets/scripts/js/jquery.js',
+            'src/assets/scripts/js/selectivizr.js',
+            'src/assets/scripts/js/remUnitPollify.js',
         ],
         srcJquery = [
             'src/assets/scripts/js/compatibilyImages.js',
@@ -88,12 +90,13 @@ gulp.task('html', () => {
 gulp.task('pages', () => {
     const pagesSrc = ['src/*.php'],
         pagesDist = ['dist/']
-    gulp.src(pagesSrc).pipe(gulp.dest(pagesDist))
+    return gulp.src(pagesSrc).pipe(gulp.dest(pagesDist))
 })
 gulp.task('partials', () => {
     const pagesComponentsSrc = ['src/assets/partials/*.php'],
         pagesComponentsDist = ['dist/assets/partials/']
-    gulp.src(pagesComponentsSrc)
+    return gulp
+        .src(pagesComponentsSrc)
         .pipe(
             htmlmin({
                 collapseWhitespace: true,
@@ -193,7 +196,7 @@ gulp.task('clean', () => {
     return gulp.src(srcClean, { read: false }).pipe(clean())
 })
 gulp.task(
-    'all',
+    'build',
     gulp.series(
         'clean',
         'fontAwesome',
