@@ -4,11 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Setup Theme Wordpress</title>
-        <!-- Esconde as mudanças visuais da biblioteca. -->
+        <!-- Esconde as mudanças visuais da biblioteca de acessibilidade. -->
         <link
             rel="stylesheet"
             type="text/css"
             href="./assets/acessibilidade/css/hide_changes.css"
+            media="print"
+            onload="this.media='all'"
         />
         <link
             rel="stylesheet"
@@ -24,11 +26,6 @@
             media="print"
             onload="this.media='all'"
         />
-        <!-- Faz com que seja possível armazenar todos os event listener da página. -->
-        <script
-            type="text/javascript"
-            src="./assets/acessibilidade/js/eventlistener.js"
-        ></script>
     </head>
     <body>
         <h1>Setup</h1>
@@ -37,6 +34,11 @@
             alt="Jhonata Vinicius"
         />
     </body>
+    <!-- Faz com que seja possível armazenar todos os event listener da página. -->
+    <script
+        type="text/javascript"
+        src="./assets/acessibilidade/js/eventlistener.js"
+    ></script>
     <script src="./assets/scripts/js/jQuery.js"></script>
     <script async src="./assets/scripts/js/selectivizr.js"></script>
     <script async src="./assets/scripts/js/html5shiv.js"></script>
