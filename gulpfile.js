@@ -151,6 +151,8 @@ gulp.task('acessibilidade', () => {
             './src/assets/acessibilidade/js/hatemile/util/html/**',
             './src/assets/acessibilidade/_locales/pt_BR/js/*',
             './src/assets/acessibilidade/_locales/pt_BR/coffee/*',
+            './src/assets/acessibilidade/_locales/en_US/js/*',
+            './src/assets/acessibilidade/_locales/en_US/coffee/*',
         ],
         dest = [
             './dist/assets/acessibilidade/css/',
@@ -167,6 +169,8 @@ gulp.task('acessibilidade', () => {
             './dist/assets/acessibilidade/js/hatemile/util/html/',
             './dist/assets/acessibilidade/_locales/pt_BR/js/',
             './dist/assets/acessibilidade/_locales/pt_BR/coffee/',
+            './dist/assets/acessibilidade/_locales/en_US/js/',
+            './dist/assets/acessibilidade/_locales/en_US/coffee/',
         ]
 
     gulp.src(src[0])
@@ -185,7 +189,9 @@ gulp.task('acessibilidade', () => {
     gulp.src(src[10]).pipe(uglifyJs()).pipe(gulp.dest(dest[10]))
     gulp.src(src[11]).pipe(uglifyJs()).pipe(gulp.dest(dest[11]))
     gulp.src(src[12]).pipe(gulp.dest(dest[12]))
-    return gulp.src(src[13]).pipe(gulp.dest(dest[13]))
+    gulp.src(src[13]).pipe(gulp.dest(dest[13]))
+    gulp.src(src[14]).pipe(gulp.dest(dest[14]))
+    gulp.src(src[15]).pipe(gulp.dest(dest[15]))
 })
 gulp.task('clean', () => {
     const srcClean = [
