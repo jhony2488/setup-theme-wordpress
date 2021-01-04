@@ -7,7 +7,9 @@ const gulp = require('gulp'),
     clean = require('gulp-clean'),
     sass = require('gulp-sass'),
     htmlmin = require('gulp-htmlmin'),
-    ts = require('gulp-typescript')
+    ts = require('gulp-typescript'),
+    concat = require('gulp-concat')
+
 sass.compiler = require('node-sass')
 
 gulp.task('img', () => {
@@ -49,12 +51,20 @@ gulp.task('js', () => {
             'src/assets/scripts/js/jquery.js',
             'src/assets/scripts/js/selectivizr.js',
         ],
-        srcJquery = [
-            'src/assets/scripts/js/acessibilidade.js',
+        srcJsPolify = [
+            'src/assets/scripts/js/html5Shiv.js',
+            'src/assets/scripts/js/respond.js',
+            'src/assets/scripts/js/selectivizr.js',
         ],
+        srcJquery = ['src/assets/scripts/js/acessibilidade.js'],
         distJs = ['dist/assets/scripts/js/']
     gulp.src(srcJquery).pipe(gulp.dest(distJs))
-    return gulp.src(srcJs).pipe(uglifyJs()).pipe(gulp.dest(distJs))
+    gulp.src(srcJs).pipe(uglifyJs()).pipe(gulp.dest(distJs))
+    return gulp
+        .src(srcJsPolify)
+        .pipe(concat('allPolify.js'))
+        .pipe(gulp.dest(distJs))
+        .pipe(gulp.dest('./src/assets/scripts/js/'))
 })
 gulp.task('ts', () => {
     const src = ['./src/assets/scripts/typescript/**.ts'],
