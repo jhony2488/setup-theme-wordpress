@@ -51,7 +51,6 @@ gulp.task('js', () => {
             'src/assets/scripts/js/remUnitPollify.js',
         ],
         srcJquery = [
-            'src/assets/scripts/js/compatibilyImages.js',
             'src/assets/scripts/js/acessibilidade.js',
         ],
         distJs = ['dist/assets/scripts/js/']
