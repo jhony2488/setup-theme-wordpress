@@ -1,0 +1,32 @@
+{
+  "name": "hatemile-for-javascript",
+  "version": "2.0.0",
+  "description": "HaTeMiLe (HTML Accessible) is a library that can convert a HTML code in a HTML code more accessible.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hatemile/hatemile-for-javascript.git"
+  },
+  "keywords": [
+    "accessibility",
+    "assistive-technology",
+    "screen-reader",
+    "wcag",
+    "wai-aria"
+  ],
+  "author": "Carlson Santana Cruz",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/hatemile/hatemile-for-javascript/issues"
+  },
+  "homepage": "https://github.com/hatemile/hatemile-for-javascript#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-codo": "^0.3.0",
+    "grunt-coffeelint": "0.0.16",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-js-beautify": "^0.1.4"
+  }
+}

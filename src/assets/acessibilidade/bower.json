@@ -1,0 +1,26 @@
+{
+  "name": "hatemile",
+  "version": "2.0.0",
+  "authors": [
+    "Carlson Santana Cruz"
+  ],
+  "description": "HaTeMiLe (HTML Accessible) is a library that can convert a HTML code in a HTML code more accessible.",
+  "main": "",
+  "keywords": [
+    "accessibility",
+    "wcag",
+    "accessible"
+  ],
+  "license": "Apache License, Version 2.0",
+  "homepage": "https://github.com/hatemile/hatemile-for-javascript",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "JSCSSP": "jscssp#^0.1.1"
+  }
+}
