@@ -1,1 +1,0 @@
-(function(){"use strict";var t;function e(){}this.hatemile||(this.hatemile={}),(t=this.hatemile).util||(t.util={}),(t=this.hatemile.util).css||(t.css={}),this.hatemile.util.css.StyleSheetRule=(e.prototype.hasProperty=function(t){},e.prototype.hasDeclarations=function(){},e.prototype.getDeclarations=function(t){},e.prototype.getSelector=function(){},e)}).call(this);
