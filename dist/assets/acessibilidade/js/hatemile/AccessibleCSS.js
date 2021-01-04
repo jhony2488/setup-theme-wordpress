@@ -1,0 +1,1 @@
+(function(){"use strict";function e(){}this.hatemile||(this.hatemile={}),this.hatemile.AccessibleCSS=(e.prototype.provideSpeakProperties=function(e){},e.prototype.provideAllSpeakProperties=function(){},e)}).call(this);

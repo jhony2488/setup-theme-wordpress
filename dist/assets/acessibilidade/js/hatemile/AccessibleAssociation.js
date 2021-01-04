@@ -1,0 +1,1 @@
+(function(){"use strict";function t(){}this.hatemile||(this.hatemile={}),this.hatemile.AccessibleAssociation=(t.prototype.associateDataCellsWithHeaderCells=function(t){},t.prototype.associateAllDataCellsWithHeaderCells=function(){},t.prototype.associateLabelWithField=function(t){},t.prototype.associateAllLabelsWithFields=function(){},t)}).call(this);

@@ -1,0 +1,1 @@
+(function(){"use strict";var t;function e(){}this.hatemile||(this.hatemile={}),(t=this.hatemile).util||(t.util={}),(t=this.hatemile.util).css||(t.css={}),this.hatemile.util.css.StyleSheetDeclaration=(e.prototype.getValue=function(){},e.prototype.getValues=function(){},e.prototype.getProperty=function(){},e)}).call(this);
