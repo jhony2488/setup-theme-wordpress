@@ -1,7 +1,16 @@
-@import "./_partials/bosons/index";
-@import "./_partials/quarks/index";
+/*
+Theme Name: Site institucional Theme
+Theme URI: https://www.jhonyaraujo.com.br/
+Author: Jhonata Vinicius
+Author URI: https://www.jhonyaraujo.com.br/
+Description: Tema para o curso de WordPress da Danki Code
+Version: 1.0
+*/
 
 @import "./_partials/acessibilidade";
+
+@import "./_partials/bosons/index";
+@import "./_partials/quarks/index";
 
 @import "./_partials/reset";
 @import "./_partials/normalize";
